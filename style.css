@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+/* I had the intention of trying to make this responseive but completely
+forgot it at the start(responsive first) and it didn't hit me until the end.  */
+
+/* Global START */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(153, 153, 153);
+  scrollbar-color: #ffb263 #3f3d56;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+*:hover {
+  color: black;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #3f3d56;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  -webkit-box-shadow: inset 0 0 10px #ffb263;
+}
+/* Global END */
+
+/* Header Start */
+header {
+  font-family: "Architects Daughter", cursive;
+  height: 15vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: rgb(183, 181, 168);
+  background-image: url("./assets/undraw_nature_m5ll.svg"),
+    url("./assets/undraw_nature_m5ll.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-size: 200px 200px;
+}
+
+/* Header Effects START */
+header h1:hover {
+  animation: header 3s infinite alternate;
+}
+@keyframes header {
+  0% {
+    color: rgb(153, 153, 153);
+  }
+  25% {
+    color: rgb(66, 66, 66);
+  }
+  40% {
+    color: rgb(24, 24, 24);
+  }
+  55% {
+    color: rgb(77, 63, 42);
+  }
+  65% {
+    color: rgb(105, 79, 41);
+  }
+  80% {
+    color: rgb(145, 100, 34);
+  }
+  100% {
+    color: rgb(184, 114, 10);
+  }
+}
+/* Header Effects END */
+/* Header End */
+
+/* Main Start */
+.main {
+  font-family: "Oswald", sans-serif;
+  background-color: #e6e6e6;
+  margin-top: 1vh;
+}
+
+/*First Article START */
+
+/* Article Global Tag START */
+.article {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+/* Article Global Tag END */
+
+/* First Article Heading START */
+.article__one--heading {
+  font-size: 3rem;
+  padding-bottom: 3%;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px #ffb263;
+}
+/* First Article Heading END */
+
+/* First Article Paragraph One START */
+.article__one--para1 {
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+/* First Article Paragraph One END */
+
+/* First Article List START */
+.article__one--ol {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.article__one--ol li {
+  text-transform: uppercase;
+  padding: 3rem;
+}
+/* First Article List END */
+
+/* First Article Paragraph 2 START */
+.article__one--para2 {
+  font-size: 20px;
+  max-width: 50%;
+  height: 5%;
+}
+/* First Article Paragraph 2 END */
+
+/*First Article END */
+
+/* The Flag START */
+.flag {
+  height: 80vh;
+  width: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flag Heading START */
+.flag__heading {
+  margin: auto;
+  font-size: 3rem;
+  font-variant: small-caps;
+  padding-bottom: 5%;
+}
+.flag__heading:hover {
+  color: #00778b;
+}
+/* Flag Heading END */
+
+/* Flag Image START */
+.flag__image {
+  width: 50%;
+  animation: flag 5s infinite alternate;
+}
+@keyframes flag {
+  from {
+    margin-left: 50%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+/* Flag Image END */
+
+/* The Flag END */
+
+/* Second Article START */
+
+/* Second  Article Heading START */
+
+.article__two--heading {
+  display: inline-block;
+  color: #fff;
+  font-size: 32px;
+  background: linear-gradient(to right, #ffb263 10%, #3f3d56 50%, #ff6584 60%);
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: color 50s infinite;
+}
+@keyframes color {
+  to {
+    background-position: 1000% center;
+  }
+}
+
+/* Second  Article Heading END */
+
+/* Second Article List START */
+.article__two--ul {
+  margin: 5%;
+  width: 25%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.article__two--ul li {
+  list-style: upper-roman;
+  /* SAMAMIA, I'm tired of writing this*/
+}
+/* Second Article List END */
+
+/* Second Article Paragraph START */
+
+.article__two--para1 {
+  font-size: 20px;
+  max-width: 50%;
+  height: 5%;
+}
+/* Second Article Paragraph END */
+
+/* Second Article END */
+
+/* Aside START */
+.aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: auto;
+}
+
+/* Aside Heading START */
+.aside__heading {
+  font-size: 30px;
+  transform: rotate(270deg);
+  padding: 5%;
+}
+/* Aside Heading END */
+
+/* Aside Table START */
+.aside__table {
+  border-collapse: collapse;
+  width: 50%;
+}
+.aside__table,
+th,
+td {
+  padding: 1%;
+  text-align: center;
+}
+/* Aside Table END */
+
+/* Aside END */
+
+/* Button To The Top START */
+
+.btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.btn {
+  background-color: #505a1e;
+  border: solid;
+  height: 80px;
+  position: absolute;
+  width: 90px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.btn-text {
+  text-decoration: none;
+  color: #e6e6e6;
+  font-size: 35px;
+  letter-spacing: 5px;
+}
+.btn-text:hover {
+  color: #ffb263;
+}
+/* Button To The Top END */
+
+/* Main End */
+
+/* Footer Start */
+.footer {
+  background-color: rgb(183, 181, 168);
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.footer__header,
+.footer__copyright {
+  padding: 1%;
+  font-size: 14px;
+  color: rgba(44, 44, 44, 0.589);
+  font-weight: 100;
+}
+
+.email-image {
+  height: 2rem;
+}
+
+/* Footer End */
